@@ -1,0 +1,28 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block main %}
+    <div class="settings" style="width: 33%; float: left;" data-id="{{page.id}}">
+        <div class="type_elements" style="width: 33%; float: left;">
+            {% for type_element in type_elements %}
+                <div class="type-element" data-id="{{type_element.id}}">{{ type_element.name }}</div>
+            {% endfor %}
+        </div>
+        <div class="elements" style="width: 33%; float: left;">
+            {% for element in elements %}
+                <div class="element" data-id="{{element.id}}">
+                    {{ element.elementType.name }}
+                    <button type="button" class="close" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="attributs" style="width: 33%; float: left;"></div>
+        <div style="clear: both;"></div>
+    </div>
+    <div class="page" style="width: 67%; float: right;"></div>
+{% endblock %}
+
+{% block extrajs %}
+    <script  src="{% static 'base/js/edit_page.js' %}"></script>
+{% endblock %}

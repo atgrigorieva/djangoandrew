@@ -1,0 +1,11 @@
+{
+  "name": "multisite",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Petrachkov A.D.",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "webpack-cli": "^3.2.3"
+  }
+}

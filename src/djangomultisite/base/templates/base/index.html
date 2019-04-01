@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Рабочий кабинет</title>
+</head>
+<body>
+	{% for pure_site in pure_sites %}
+		<h2><a href="{% url 'edit_site' pure_site.id %}">{{ pure_site.name }}</a></h2>
+	{% endfor %}
+	<a href="{% url 'create_site' %}">Создать сайт</a>
+</body>
+</html>

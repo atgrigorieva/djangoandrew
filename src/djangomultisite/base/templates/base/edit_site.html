@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Редактирование сайта</title>
+</head>
+<body>
+	{% for page in pages %}
+		<div><a href="{% url 'edit_page' id_page=page.id %}">{{ page.title }}</a></div>
+	{% endfor %}
+	<a href="{% url 'create_page' id_pure_site=pure_site.id %}">Создать страницу</a>
+</body>
+</html>
