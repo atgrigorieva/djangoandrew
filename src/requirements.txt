@@ -10,7 +10,7 @@ defer==1.0.6
 dirspec==13.10
 Django==2.1.5
 EasyProcess==0.2.3
-httplib2==0.9.1
+httplib2==0.18.0
 idna==2.0
 louis==2.6.4
 lxml==3.5.0
